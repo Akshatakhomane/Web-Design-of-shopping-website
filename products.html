@@ -1,0 +1,336 @@
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+.header
+{background-color: brown;
+color: white;
+text-align: center;
+font-size: 25px;
+margin: 0 0 10px 0;
+border-box: 1px ;
+border-color: black;
+}
+
+h1 {
+margin: 0 10px 10px 10px;
+  font-size: 50px;}
+  
+h4{color: black;
+font-size: 20px;
+font-family: Arial;}
+
+img{
+margin: 20px 10px 10px 10px;
+border-box: 20px ;
+border-color: gray;
+border-style: solid;
+border-width: 3px;}
+
+  footer {
+      background-color: brown;
+      padding: 25px;
+	  color: white;
+    }
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="row header">
+
+
+<h1>Our Products</h1>
+<div class="main">
+
+</div>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('SAREE')"> SAREE </button>
+  <button class="btn" onclick="filterSelection('TSHIRTS')"> TSHIRTS </button>
+  <button class="btn" onclick="filterSelection('FROCK')"> FROCK </button>
+  <button class="btn" onclick="filterSelection('FORMALS')"> FORMALS </button>
+  <button class="btn" onclick="filterSelection('DRESS')"> DRESS </button> 
+  <button class="btn" onclick="filterSelection('MAN')"> MENSWARE </button>
+  <button class="btn" onclick="filterSelection('kid')"> KIDS SECTION </button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column SAREE">
+    <div class="content">
+      <img src="image/home8.jpg"  width="100%" height="350px" alt="Image">
+      <h4>SAREE</h4>
+      
+    </div>
+  </div>
+  <div class="column SAREE">
+    <div class="content">
+    <img src="image/paithani1.jpg" width="100%" height="350px">
+      <h4>PAITHANI</h4>
+      
+    </div>
+  </div>
+  <div class="column SAREE">
+    <div class="content">
+    <img src="image/silk.jpg"  width="100%" height="350px">
+      <h4>SILK</h4>
+      
+    </div>
+  </div>
+  
+  <div class="column TSHIRTS">
+    <div class="content">
+      <img src="image/home1.jpg" width="100%" height="350px">
+      <h4>Full</h4>
+      
+    </div>
+  </div>
+  <div class="column TSHIRTS">
+    <div class="content">
+    <img src="image/t2.jpg"  width="100%" height="350px">
+      <h4>Fancy</h4>
+      
+    </div>
+  </div>
+  <div class="column TSHIRTS">
+    <div class="content">
+    <img src="image/t1.jpg" width="100%" height="350px" >
+      <h4>Classic</h4>
+      
+    </div>
+  </div>
+  
+  <div class="column FORMALS">
+    <div class="content">
+      <img src="image/mens.jpg"  width="100%" height="350px" >
+      <h4>Decent</h4>
+      
+    </div>
+  </div>
+  <div class="column FORMALS">
+    <div class="content">
+    <img src="image/home4.jpg"  width="100%" height="350px">
+      <h4>Mans</h4>
+      
+    </div>
+  </div>
+  <div class="column FORMALS">
+    <div class="content">
+    <img src="image/formal.jpg"  width="100%" height="350px">
+      <h4>Classic</h4>
+      
+    </div>
+  </div>
+  
+  <div class="column FROCK">
+    <div class="content">
+      <img src="image/home7.jpg"  width="100%" height="350px">
+      <h4>Classic</h4>
+      
+    </div>
+  </div>
+  <div class="column FROCK">
+    <div class="content">
+    <img src="image/fash.jpg"  width="100%" height="350px">
+      <h4>Decent</h4>
+      
+    </div>
+  </div>
+  <div class="column FROCK">
+    <div class="content">
+    <img src="image/child.jpg" width="100%" height="350px">
+      <h4>Gown</h4>
+      
+    </div>
+  </div>
+  
+   <div class="column DRESS">
+    <div class="content">
+      <img src="image/d1.jpg" width="100%" height="350px">
+      <h4>Suit</h4>
+      
+    </div>
+  </div>
+  <div class="column DRESS">
+    <div class="content">
+    <img src="image/d2.jpg"  width="100%" height="350px">
+      <h4>Fancy</h4>
+      
+    </div>
+  </div>
+  <div class="column DRESS">
+    <div class="content">
+    <img src="image/home9.jpg"  width="100%" height="350px">
+      <h4> Traditional </h4>
+      
+    </div>
+  </div>
+     <div class="column MAN">
+    <div class="content">
+      <img src="image/mans1.jpg" width="100%" height="350px">
+      <h4>Suit</h4>
+      
+    </div>
+  </div>
+  <div class="column MAN">
+    <div class="content">
+    <img src="image/mans2.jpg"  width="100%" height="350px">
+      <h4>Fancy</h4>
+      
+    </div>
+  </div>
+  <div class="column MAN">
+    <div class="content">
+    <img src="image/mans3.jpg"  width="100%" height="350px">
+      <h4> TSHIRTS </h4>
+      
+    </div>
+  </div>
+    <div class="column kid">
+    <div class="content">
+      <img src="image/kid1.jpg" width="100%" height="350px">
+      <h4>Classic</h4>
+      
+    </div>
+  </div>
+  <div class="column kid">
+    <div class="content">
+    <img src="image/kid2.jpg"  width="100%" height="350px">
+      <h4>Fancy</h4>
+      
+    </div>
+  </div>
+  <div class="column kid">
+    <div class="content">
+    <img src="image/kids.jpg"  width="100%" height="350px">
+      <h4> Decent </h4>
+      
+    </div>
+  </div>
+  
+<!-- END GRID -->
+</div>
+
+
+<footer class="container-fluid text-center">
+  <p>Online Store Copyright!!</p>  
+  <form class="form-inline">Get deals:
+    <input type="email" class="form-control" size="50" placeholder="Email Address">
+    <button type="button" class="btn btn-danger">Sign Up</button>
+  </form>
+</footer>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
